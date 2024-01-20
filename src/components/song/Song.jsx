@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AudioContext } from "../../context/AudioContext";
+import { AudioContext } from "../../context/AudioContext.jsx";
 import style from "./song.module.scss";
 import { IconButton } from "@mui/material";
 import { PlayArrow, Pause } from "@mui/icons-material";

@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import { AudioContext } from "../../context/AudioContext";
+import { AudioContext } from "../../context/AudioContext.jsx";
 import style from "./playbar.module.scss";
 import { Slider, IconButton } from "@mui/material";
 import { Pause, PlayArrow, VolumeMute, VolumeUp, SkipPrevious, SkipNext } from "@mui/icons-material";

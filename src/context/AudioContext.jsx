@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import trackList from "../assets/trackList";
+import trackList from "../assets/trackList.js";
 
 const defaultSong = trackList[0];
 const audio = new Audio(defaultSong.src);

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import albumList from "../assets/albumList";
+import albumList from "../assets/albumList.js";
 import style from "./albumPage.module.scss";
-import Song from "../components/song/song";
+import Song from "../components/song/Song.jsx";
 
 const Album = () => {
 	const { id } = useParams();

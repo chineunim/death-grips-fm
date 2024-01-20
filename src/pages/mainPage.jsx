@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import albumList from "../assets/albumList";
+import albumList from "../assets/albumList.js";
 import style from "./mainPage.module.scss";
 
 const MainPage = () => {
