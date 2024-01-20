@@ -1,5 +1,5 @@
 :root {
-	--duration: 7s;
+	--duration: 20s;
 }
 
 @keyframes slide {
@@ -10,8 +10,6 @@
     transform: translate(-100%, 0);
   }
 }
-
-
 
 .playbar {
 	position: fixed;
@@ -55,6 +53,11 @@
 
   & > p {
     font-size: 14px;
+  }
+
+	& > h4 {
+    width: max-content;
+    white-space: nowrap;
   }
 }
 .animatedTitle{
