@@ -1,8 +1,8 @@
-import Header from "./components/header/Header"
-import MainPage from "./pages/mainPage";
-import Album from "./pages/albumPage";
-import Playbar from "./components/playbar/Playbar";
-import Banner from "./components/banner/banner";
+import Header from "./components/header/header.jsx"
+import MainPage from "./pages/mainPage.jsx";
+import Album from "./pages/albumPage.jsx";
+import Playbar from "./components/playbar/Playbar.jsx";
+import Banner from "./components/banner/banner.jsx";
 import style from './global.module.scss';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
