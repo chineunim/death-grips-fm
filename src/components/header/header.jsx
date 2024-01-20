@@ -5,7 +5,7 @@ import style from "./header.module.scss"
 const Header = () => {
 	return(
 		<div className={style.container}>
-			<Link to="/">
+			<Link to="/death-grips-fm/">
 				<HomeIcon className={style.home} />
 			</Link>
 			<h2>A	L	B	U	M	S</h2>

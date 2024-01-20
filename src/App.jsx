@@ -13,7 +13,7 @@ const App = () => {
 			<Router>
 					<Header />
 					<Routes>
-						<Route path="/" exact element={<MainPage />} />
+						<Route path="/death-grips-fm/" exact element={<MainPage />} />
 						<Route path="/album/:id" element={<Album />} />
 					</Routes>
 			</Router>
