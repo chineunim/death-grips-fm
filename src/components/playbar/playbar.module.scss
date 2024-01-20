@@ -1,0 +1,223 @@
+:root {
+	--duration: 7s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+
+
+.playbar {
+	position: fixed;
+	background: linear-gradient(0deg, rgb(26, 24, 23) 0%, rgb(17, 13, 10) 20%, rgb(8, 7, 5) 100%);
+	width: 100%;
+	height: 70px;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+	& > .togglePlay {
+		transform: scale(120%);
+	}
+
+	& > p {
+    font-size: 14px;
+  }
+
+  & * {
+    color: white;
+  }
+}
+
+.cover {
+	margin-left: 2%;
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+	border: 1px solid #333;
+}
+
+.credits {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+	overflow: hidden;
+	width: 230px;
+
+  & > p {
+    font-size: 14px;
+  }
+}
+.animatedTitle{
+	white-space: nowrap;
+	display: inline-block;
+	padding-left: 100%;
+	animation-name: slide;
+	animation-duration: var(--duration);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.durationSlider {
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	width: 700px;
+	gap: 20px;
+}
+.durationSlider > span:nth-child(2) > span:nth-child(3) {
+	display: none;
+	width: 0;
+	height: 0;
+}
+.volumeSlider {
+	margin-left: auto;
+	margin-right: 7%;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	width: 200px;
+}
+.volumeSlider > span:nth-child(2) > span:nth-child(3) {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+@media screen and (max-width: 1600px) {
+	.durationSlider {
+		width: 550px;
+	}
+	.volumeSlider {
+		margin-right: 4%;
+	}
+	.credits {
+		width: 180px;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.durationSlider {
+			width: 500px;
+			gap: 8px
+		}
+		.volumeSlider {
+			margin-right: 2%;
+			gap: 8px;
+		}
+		.credits {
+			width: 140px;
+		}
+		.controlButtons {
+			width: 100px;
+			display: flex;
+			gap: 4px;
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+			button {
+				padding: 5px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.durationSlider,
+	.volumeSlider {
+		display: none;
+	}
+
+	.controlButtons {
+		position: absolute;
+		margin-left: auto;
+		right: 8%;
+	}
+
+	.credits {
+		max-width: 150px;
+	}
+
+	.animatedTitle{
+		padding-left: 0;
+		animation-duration: 0s;
+	}
+
+	.expanded {
+		position: fixed;
+		z-index: 5;
+    bottom: 0;
+    left: 0;
+		transition: all .3s ease-out;
+    height: 100%;
+    width: 100%;
+		overflow: hidden;
+
+		.cover {
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			top: 25%;
+			left: 0;
+			right: 0;
+			height: 250px;
+			width: 250px;
+		}
+		.credits{
+			position: absolute;
+			top: 62%;
+			left: 18%;
+		}
+		.animatedTitle{
+			padding-left: 100%;
+			animation-duration: var(--duration);
+		}
+		.durationSlider{
+			display: flex;
+			position: absolute;
+			top: 70%;
+			left: 0;
+			right: 0;
+			width: 350px;
+		}
+		.controlButtons{
+			width: 230px;
+			display: flex;
+			justify-content: space-between;
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			top: 75%;
+			left: 0;
+			right: 0;
+
+			svg{
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		.closeButton {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			padding: 10px;
+			cursor: pointer;
+			background-color: #333;
+			color: white;
+			border-radius: 5px;
+		}
+	}
+	.notExpanded {
+		height: 70px;
+		transition: all .3s ease-out;
+	}
+}

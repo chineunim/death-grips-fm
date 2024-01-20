@@ -1,0 +1,85 @@
+@keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+
+* {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.song {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 20px;
+	animation: fadein .7s;
+
+	&b {
+		letter-spacing: 1px;
+		font-size: 15px;
+	}
+	
+	&p {
+		letter-spacing: 1px;
+		color: #9e9e9e;
+		font-size: 15px;
+	}
+}
+
+.play {
+	color: #000;
+	& > svg {
+		color: #000;
+	}
+}
+
+.credits {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.cover {
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+}
+
+.playing {
+	color: #9340fe;
+}
+
+@media screen and (max-width: 900px) {
+	.songDuration {
+		margin-right: 15px;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.song{
+		gap: 15px;
+
+		button {
+			display: none;
+		}
+	}
+	.cover{
+		margin-left: 3%;
+	}
+	.credits {
+		width: 280px;
+
+		b{
+			height: 21px;
+			overflow: hidden;
+		}
+	}
+
+	@media screen and (max-width: 390px) {
+		.credits{
+			width: 250px;
+		}
+	}
+
+}

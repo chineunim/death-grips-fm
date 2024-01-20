@@ -1,0 +1,38 @@
+* {
+	padding: 0;
+	margin: 0;
+	overscroll-behavior-y: contain;
+}
+
+body {
+	background-color: #000;
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.disclaimer {
+	margin-bottom: 80px;
+	text-align: center;
+	a {
+		color: red;
+		text-decoration: none;
+		p {
+			color: #fff;
+		}
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.wrapper{
+		padding: 0;
+		margin: 0;
+	}
+}

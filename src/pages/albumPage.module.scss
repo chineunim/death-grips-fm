@@ -1,0 +1,24 @@
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	height: auto;
+	width: 900px;
+	margin-bottom: 80px;
+	padding: 15px;
+	overflow: auto;
+	background-color: #eee;
+	scrollbar-width: thin;
+	scrollbar-color: rgb(48, 48, 48) rgb(197, 197, 197);;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.list {
+		padding: 0;
+		width: 100%;
+	}
+}
