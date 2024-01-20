@@ -14,7 +14,7 @@ const App = () => {
 					<Header />
 					<Routes>
 						<Route path="/death-grips-fm/" exact element={<MainPage />} />
-						<Route path="/album/:id" element={<Album />} />
+						<Route path="/death-grips-fm/album/:id" element={<Album />} />
 					</Routes>
 			</Router>
 			<div className={style.disclaimer}>
