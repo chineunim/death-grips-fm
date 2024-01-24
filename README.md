@@ -1,8 +1,8 @@
-# React + Vite
+# DEATH GRIPS FM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a fan-made music-app inspired by Death Grips. The application includes the discography of the band and minimalistic playbar for confortable use.
 
-Currently, two official plugins are available:
+# https://chineunim.github.io/death-grips-fm/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I do not own rights to any music used on this website. Please, support the Death Grips!
+# https://thirdworlds.net/ 
