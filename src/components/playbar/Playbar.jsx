@@ -15,12 +15,12 @@ const Playbar = () => {
 	const [isMobileVersion, setIsMobileVersion] = useState(false);
 
 	const convertedDuration = isFinite(duration) ? secToMMSS(duration) : '0:00';
-	const convertedCurrentTime = secToMMSS(currentTime);
+	const convertedCurrentTime = secToMMSS(Math.floor(currentTime));
 	const titleClass = title.length > 32 ? style.animatedTitle : style.title;
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	const handleChangeCurrentTime = (_, value) => {
-		const time = Math.round((value / 100) * duration);
+		const time = Math.floor((value / 100) * duration);
 		setCurrentTime(time);
 		audio.currentTime = time;
 	}
